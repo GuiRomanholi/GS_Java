@@ -1,17 +1,27 @@
 package models;
 
+import java.util.Scanner;
+
 public class Cliente {
     private String cpf;
     private String email;
     private String nome;
+    private Enum tipoCliente;
 
 
     public void cadastrarCliente(){
-
+        Scanner leitor = new Scanner(System.in);
+        System.out.println("Informe seu nome: ");
+        this.nome = leitor.nextLine();
+        System.out.println("Informe seu cpf: ");
+        this.cpf = leitor.nextLine();
+        System.out.println("Informe seu email: ");
+        this.email = leitor.nextLine();
     }
 
-    public String exibirCDetalhes(){
-        return "";
+    public String exibirDetalhes(){
+        return "Muito bem " + this.nome + ", você está cadastrado(a) no sistema" +
+                " e você é " + tipoCliente;
     }
 
     //getters e setters
@@ -37,5 +47,13 @@ public class Cliente {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public Enum getTipoCliente() {
+        return tipoCliente;
+    }
+
+    public void setTipoCliente(Enum tipoCliente) {
+        this.tipoCliente = tipoCliente;
     }
 }

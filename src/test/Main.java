@@ -1,9 +1,7 @@
 package test;
 
-import models.Coletor;
-import models.EmpresaPatrocinadora;
-import models.PlasticoReciclado;
-import models.PostoReciclagem;
+import models.*;
+import models.enums.TipoClienteEnum;
 
 import java.util.Scanner;
 
@@ -33,8 +31,32 @@ public class Main {
             opcao = leitorNum.nextInt();
 
             if (opcao == 1){
-                System.out.println("Deu 1");
+
+                Cliente cliente = new Cliente();
+                cliente.cadastrarCliente();
+                int opcaoCliente;
+                boolean executandoCliente = true;
+                while (executandoCliente){
+                    System.out.println("Você é qual tipo de cliente?");
+                    System.out.println("1 para pessoa física / 2 para jurídica");
+                    opcaoCliente = leitorNum.nextInt();
+                    if (opcaoCliente == 1){
+                        cliente.setTipoCliente(TipoClienteEnum.PFISICA);
+                        break;
+                    } else if (opcaoCliente == 2) {
+                        cliente.setTipoCliente(TipoClienteEnum.PJURIDICA);
+                        break;
+                    }else {
+                        System.out.println("Por Favor informe 1 para pessoa física / 2 para jurídica");
+                    }
+                }
+                System.out.println(cliente.exibirDetalhes());
+
+                System.out.println("-------------------------------------------");
+                System.out.println("Pressione Enter para continuar...");
+                leitor.nextLine();
             } else if (opcao == 2) {
+
                 EmpresaPatrocinadora empresaPatrocinadora = new EmpresaPatrocinadora();
                 empresaPatrocinadora.cadastroEmpresa();
                 empresaPatrocinadora.exibirDados();
@@ -43,6 +65,7 @@ public class Main {
                 System.out.println("Pressione Enter para continuar...");
                 leitor.nextLine();
             } else if (opcao == 3) {
+
                 PlasticoReciclado plasticoReciclado = new PlasticoReciclado();
                 plasticoReciclado.setId("123325");
                 plasticoReciclado.setPeso(500);
@@ -53,6 +76,7 @@ public class Main {
                 System.out.println("Pressione Enter para continuar...");
                 leitor.nextLine();
             } else if (opcao == 4) {
+
                 PostoReciclagem postoReciclagem = new PostoReciclagem();
                 postoReciclagem.setEndereco("Rua Codato Batista, 364");
                 postoReciclagem.setCnpj("43.350.131/0001-01");
@@ -63,17 +87,27 @@ public class Main {
                 System.out.println("Pressione Enter para continuar...");
                 leitor.nextLine();
             } else if (opcao == 5) {
+
                 Coletor coletor = new Coletor();
+                int opcaoColetor;
                 coletor.setId("343236");
                 coletor.setVeiculo("Onix");
+                coletor.setNumColeta(10);
                 coletor.chamarColeto();
                 coletor.numeroDeColetas();
-                coletor.detalhesColetor();
+                System.out.println("Deseja ver os detalhes do coletor? 1 para SIM / 2 para NÃO");
+                opcaoColetor = leitorNum.nextInt();
+                if (opcaoColetor == 1){
+                    System.out.println(coletor.detalhesColetor());
+                }else {
+                    System.out.println("Retornando...");
+                }
 
                 System.out.println("-------------------------------------------");
                 System.out.println("Pressione Enter para continuar...");
                 leitor.nextLine();
             } else if (opcao == 6) {
+
                 System.out.println("Deu 6");
 
                 System.out.println("-------------------------------------------");

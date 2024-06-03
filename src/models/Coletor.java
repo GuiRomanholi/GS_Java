@@ -31,7 +31,8 @@ public class Coletor {
         }
     }
     public String detalhesColetor(){
-        return "O clt dele é " + this.id +
+        return "Informações:" +
+                "\nO clt dele é " + this.id +
                 "\nSeu veiculo é " + this.veiculo +
                 "\nE seu numero de coletas mensais é " + this.numColeta;
     }
@@ -50,7 +51,7 @@ public class Coletor {
                 System.out.println("Informe a quantidade de coletas a serem adicionadas no mês: ");
                 numeroAdicionado = leitorNum.nextInt();
                 System.out.println("Muito bem!");
-                this.numColeta = this.numColeta + numeroAdicionado;
+                setNumColeta(getNumColeta() + numeroAdicionado);
                 break;
             } else if (opcao == 2) {
                 System.out.println("Retornando...");
