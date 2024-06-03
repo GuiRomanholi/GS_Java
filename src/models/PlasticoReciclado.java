@@ -6,7 +6,9 @@ public class PlasticoReciclado {
     private int quantidade;
 
     public String exibirDetalhes(){
-        return "";
+        return "A quantidade de plástico é aproximadamente: " + this.quantidade +
+                "\nO seu peso ficou: " + this.peso + "g" +
+                "\nE o id é: " + this.id;
     }
 
     //getters e setters

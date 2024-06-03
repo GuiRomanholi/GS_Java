@@ -2,8 +2,12 @@ package models;
 
 public class PostoReciclagem extends Empresa{
     private String endereco;
-    private String informarPosto;
 
+    @Override
+    public void exibirDados() {
+        super.exibirDados();
+        System.out.println("O seu endereço é " + this.endereco);
+    }
 
 
     //getters e setters
@@ -15,11 +19,4 @@ public class PostoReciclagem extends Empresa{
         this.endereco = endereco;
     }
 
-    public String getInformarPosto() {
-        return informarPosto;
-    }
-
-    public void setInformarPosto(String informarPosto) {
-        this.informarPosto = informarPosto;
-    }
 }
