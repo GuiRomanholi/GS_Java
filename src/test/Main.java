@@ -70,7 +70,7 @@ public class Main {
                 PlasticoReciclado plasticoReciclado = new PlasticoReciclado();
                 plasticoReciclado.setId("123325");
                 plasticoReciclado.setPeso(500);
-                plasticoReciclado.setQuantidade(2);
+                plasticoReciclado.setQuantidade(4);
                 System.out.println(plasticoReciclado.exibirDetalhes());
 
                 System.out.println("-------------------------------------------");

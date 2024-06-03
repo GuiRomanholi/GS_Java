@@ -23,7 +23,7 @@ public class Coletor {
                 this.endereco = leitor.nextLine();
                 break;
             } else if (opcao == 2) {
-                System.out.println("Retornando...");
+                System.out.println("Continuando...");
                 break;
             }else {
                 System.out.println("Por Favor digite 1 para SIM / 2 para NÃO");
@@ -54,7 +54,7 @@ public class Coletor {
                 setNumColeta(getNumColeta() + numeroAdicionado);
                 break;
             } else if (opcao == 2) {
-                System.out.println("Retornando...");
+                System.out.println("Continuando...");
                 break;
             }else {
                 System.out.println("Por Favor digite 1 para SIM / 2 para NÃO");
