@@ -3,6 +3,7 @@ package test;
 import models.*;
 import models.enums.TipoClienteEnum;
 
+import java.time.LocalDate;
 import java.util.Scanner;
 
 public class Main {
@@ -108,7 +109,15 @@ public class Main {
                 leitor.nextLine();
             } else if (opcao == 6) {
 
-                System.out.println("Deu 6");
+                Pagamento pagamento = new Pagamento();
+                int pesoPagamento;
+                pagamento.setData(LocalDate.ofEpochDay(12/06/2024));
+                pagamento.setId("133644");
+                System.out.println("Qual foi o peso dos plásticos? Em Gramas");
+                pesoPagamento = leitorNum.nextInt();
+                pagamento.fazerConversao(pesoPagamento);
+                pagamento.realizarPagamento();
+                pagamento.detalhesPagamento();
 
                 System.out.println("-------------------------------------------");
                 System.out.println("Pressione Enter para continuar...");

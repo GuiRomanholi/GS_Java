@@ -7,12 +7,21 @@ public class Pagamento {
     private double valor;
     private LocalDate data;
 
-    public double fazerConversao(){
-        return 0;
+    public double fazerConversao(double peso){
+        setValor(0.50 * peso);
+        System.out.println("Convertendo o peso " + peso + "g ficou" +
+        "\nR$" + getValor());
+        return getValor();
     }
 
     public void realizarPagamento(){
-
+        System.out.println("O pagamento será realizado pelo código do pix: 1111111-111");
+        System.out.println("E o valor a ser pago é R$" + getValor());
+    }
+    public void detalhesPagamento(){
+        System.out.println("------------------------------------------------");
+        System.out.println("O pagamento " + this.id + " será feito na data " + this.data +
+                "\nE de valor R$" + this.valor);
     }
 
 
