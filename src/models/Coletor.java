@@ -9,6 +9,7 @@ public class Coletor {
     private String endereco;
 
 
+    //Serve para chamar o coletor, informando seu endereço
     public void chamarColeto(){
         Scanner leitor = new Scanner(System.in);
         Scanner leitorNum = new Scanner(System.in);
@@ -37,6 +38,7 @@ public class Coletor {
                 "\nE seu numero de coletas mensais é " + this.numColeta;
     }
 
+    //Esse metodo serve para o coletor ter um numero de coletas feitas em um mês
     public void numeroDeColetas(){
         Scanner leitorNum = new Scanner(System.in);
         int opcao;

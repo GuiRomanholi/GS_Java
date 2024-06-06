@@ -34,7 +34,9 @@ public class Main {
             if (opcao == 1){
 
                 Cliente cliente = new Cliente();
-                cliente.cadastrarCliente();
+                System.out.println("Informe seu nome: ");
+                cliente.setNome(leitor.nextLine());
+                cliente.cadastrarCliente("Júlio");
                 int opcaoCliente;
                 boolean executandoCliente = true;
                 while (executandoCliente){

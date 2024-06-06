@@ -7,6 +7,7 @@ public class Pagamento {
     private double valor;
     private LocalDate data;
 
+    //serve para fazer a conversão de valor em cima do peso das garrafas
     public double fazerConversao(double peso){
         setValor(0.50 * peso);
         System.out.println("Convertendo o peso " + peso + "g ficou" +

@@ -9,16 +9,16 @@ public class Cliente {
     private Enum tipoCliente;
 
 
-    public void cadastrarCliente(){
+    //O metodo serve para cadastrar o cliente
+    public void cadastrarCliente( String nome){
         Scanner leitor = new Scanner(System.in);
-        System.out.println("Informe seu nome: ");
-        this.nome = leitor.nextLine();
         System.out.println("Informe seu cpf: ");
         this.cpf = leitor.nextLine();
         System.out.println("Informe seu email: ");
         this.email = leitor.nextLine();
     }
 
+    //Aqui para exibir seus dados
     public String exibirDetalhes(){
         return "Muito bem " + this.nome + ", você está cadastrado(a) no sistema" +
                 " e você é " + tipoCliente;
